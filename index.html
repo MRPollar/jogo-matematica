@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>math game</title>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet"/>
+   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="css/all.min.css"/>
+   <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+   <header id="inicio">
+      <div class="container">
+
+         <div class="logo">
+            <img src="img/icone.png" alt="logomarca">
+            <h3>Math game</h3>
+         </div><!--logo-->
+         <nav class="desktop">
+            <ul>
+               <li><a class="section" href="#inicio">Início</a></li>
+               <li><a class="section" href="#sobre">Sobre</a></li>
+               <li><a class="section" href="#funcionamento">Como funciona?</a></li>
+               <li class="button"><a href="">log in <i class="fa-solid fa-right-to-bracket"></i></a></li>
+               <li class="button"><a href="">sign up <i class="fa-solid fa-user-plus"></i></a></li>
+            </ul>
+         </nav><!--desktop-->
+
+         <nav class="mobile">
+            <div class="logo-mobile">
+               <img src="img/icone.png" alt="logomarca">
+               <h3>Math game</h3>
+            </div><!--logo-->
+            <div class="menu-toggle"></div>
+            <ul>
+               <li><a class="section" href="#inicio">Início</a></li>
+               <li><a class="section" href="#sobre">Sobre</a></li>
+               <li><a class="section" href="#funcionamento">Como funciona?</a></li>
+               <li class="button"><a href="">log in <i class="fa-solid fa-right-to-bracket"></i></a></li>
+               <li class="button"><a href="">sign up <i class="fa-solid fa-user-plus"></i></a></li>
+            </ul>
+         </nav><!--desktop-->
+
+      </div><!--container-->
+   </header><!--inicio-->
+
+   <main>
+      <section id="inicio">
+         <div class="container">
+
+            <div class="inicio-single">
+               <div class="cta">
+                  <h1>Aprimore seu raciocínio <span>matemático!</span></h1>
+                  <a href="">sign up <i class="fa-solid fa-user-plus"></i></a>
+               </div>
+            </div><!--inicio-single-->
+
+            <div class="inicio-single">
+               <img src="img/bg-inicial.png" alt="">
+            </div><!--inicio-single-->
+
+         </div><!--contianer-->
+      </section><!--inicio-->
+
+      <section id="sobre">
+         <div class="container">
+
+            <h2>Sobre o jogo</h2>
+
+            <h3>Apresentação</h3>
+            <p>Este jogo foi feito a partir de três tecnologias html, css e javascript. Toda a parte visual do jogo foi feito para ser o mais agradável possivel para que o jogador tenha uma experiencia visual confortável e ao mesmo tempo amigável, funcionando em dispositivos de várias resoluções, isto inclui dispositivos móveis.</p>
+            <br/>
+            <p>Espero que goste do jogo e se divirta!!</p>
+
+            <h3>Funcionamento</h3>
+            <p>O jogo tem três níveis de dificuldade facíl, médio e difícil, os níveis se relacionam ao tempo que o jogador terá para resolver cada conta, sendo as mesmas geradas de forma aleátoria, então não se assuste com as contas. Falando em resposta o sistema de resposta é gerado de forma dinâmica a partir do javascript sendo um sistema de resposta objetivo onde só uma resposta será a correta.
+            Sobre o temporizador, ele será resetado a cada resposta que vc der com base no nível de dificuldade (como um reset de tempo caso a resposta seja correta).</p>
+            <br/>
+            <p>OBS: uma vez o jogo sendo iniciado o botão de dificuldade será desabilitado até que o tempo acabe.</p>
+
+            <h3>Placares</h3>
+            <p>Irá haver três placares, sendo estes organizados pela dificuldade escolhida que irá ranquear os jogadores com base na quantidade de resposta respondidas corretamente, lembrando que não existe um limite de resposta, o jogo só acaba quando o tempo acaba.</p>
+
+            <h3>Para devs</h3>
+            <p>Este projeto esta disponivel no github, caso queira saber mais sobre <a href="">clique aqui</a>.</p>
+         </div>
+      </section>
+   </main>
+
+   <script>
+      const toggle = document.querySelector('.menu-toggle');
+      const toggleList = document.querySelector('.mobile ul');
+
+      toggle.addEventListener('click', openMenu)
+
+      function openMenu(){
+
+         toggle.classList.toggle('active');
+         toggleList.classList.toggle('active')
+
+      }
+   </script>
+</body>
+</html>
