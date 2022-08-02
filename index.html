@@ -1,105 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <meta charset="UTF-8"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <title>math game</title>
-   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet"/>
-   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-   <link rel="stylesheet" href="css/all.min.css"/>
-   <link rel="stylesheet" href="css/style.css"/>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="/img/favicon.ico">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/geral-style.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Matematic-G</title>
 </head>
-<body>
-   <header id="inicio">
-      <div class="container">
 
-         <div class="logo">
-            <img src="img/icone.png" alt="logomarca">
-            <h3>Math game</h3>
-         </div><!--logo-->
-         <nav class="desktop">
-            <ul>
-               <li><a class="section" href="#inicio">Início</a></li>
-               <li><a class="section" href="#sobre">Sobre</a></li>
-               <li><a class="section" href="#funcionamento">Como funciona?</a></li>
-               <li class="button"><a href="">log in <i class="fa-solid fa-right-to-bracket"></i></a></li>
-               <li class="button"><a href="">sign up <i class="fa-solid fa-user-plus"></i></a></li>
-            </ul>
-         </nav><!--desktop-->
+<body class="bg-geral">
+   <section class="login flex-display activeDisplay opacity">
+      <div class="login_container radius-right">
 
-         <nav class="mobile">
-            <div class="logo-mobile">
-               <img src="img/icone.png" alt="logomarca">
-               <h3>Math game</h3>
-            </div><!--logo-->
-            <div class="menu-toggle"></div>
-            <ul>
-               <li><a class="section" href="#inicio">Início</a></li>
-               <li><a class="section" href="#sobre">Sobre</a></li>
-               <li><a class="section" href="#funcionamento">Como funciona?</a></li>
-               <li class="button"><a href="">log in <i class="fa-solid fa-right-to-bracket"></i></a></li>
-               <li class="button"><a href="">sign up <i class="fa-solid fa-user-plus"></i></a></li>
-            </ul>
-         </nav><!--desktop-->
+         <form class="login_container-form bg-white total-radius font-pink" id="login">
+            <h2 title="Conectar">Conectar</h2>
+            <div class="input-wrapper">
+               <label class="font-size-label" for="inEmail" title="E-mail">E-mail de usuário*</label>
+               <input type="email" id="inEmail" name="email"
+                  class="border-pink-1px total-radius w100 input-padding-padrao" required />
+            </div>
+            <div class="input-wrapper">
+               <label class="font-size-label" for="inPassword" title="Senha">Senha*</label>
+               <input type="password" id="inPassword" name="passord"
+                  class="border-pink-1px total-radius w100 input-padding-padrao" required />
+            </div>
+            <input title="Entrar" type="submit" value="Entrar" class="center-button" name="acao" />
+            <a href="javascript:void(0)" class="font-pink" title="Novo jogador">Novo jogador</a>
+         </form>
+         <!--login_container-form-->
 
-      </div><!--container-->
-   </header><!--inicio-->
+         <form class="register_container-form bg-white total-radius font-pink" id="register">
+            <h2 title="Novo jogador">Novo jogador</h2>
+            <div class="input-wrapper">
+               <label class="font-size-label" for="reNome" title="Nome de usuário">Nome de usuário*</label>
+               <input type="text" id="reNome" name="nome" class="border-pink-1px total-radius w100 input-padding-padrao"
+                  required />
+            </div>
+            <div class="input-wrapper">
+               <label class="font-size-label" for="reEmail" title="Definir senha">E-mail*</label>
+               <input type="email" id="reEmail" name="email"
+                  class="border-pink-1px total-radius w100 input-padding-padrao" required />
+            </div>
+            <div class="input-wrapper">
+               <label class="font-size-label" for="rePassord" title="Confimar senha">Confirmar senha*</label>
+               <input type="password" id="rePassword" name="passord"
+                  class="border-pink-1px total-radius w100 input-padding-padrao" required />
+            </div>
+            <input type="submit" value="Registrar" title="Registrar" class="center-button" name="acao" />
+            <a href="javascript:void(0)" class="font-pink" title="Entrar">&larr; Voltar</a>
+         </form>
+         <!--register_container-form-->
 
-   <main>
-      <section id="inicio">
-         <div class="container">
+      </div>
+      <!--login_container-->
 
-            <div class="inicio-single">
-               <div class="cta">
-                  <h1>Aprimore seu raciocínio <span>matemático!</span></h1>
-                  <a href="">sign up <i class="fa-solid fa-user-plus"></i></a>
+      <div class="information">
+         <div class="information_container total-radius">
+            <h2 class="font-pink">Sobre o jogo</h2>
+            <div class="information_container-slide">
+
+               <div class="information_container-slide_limiter">
+
+                  <div class="information_container-slide_slider font-pink">
+                     <div>
+                        <h2>Apresentação</h2>
+                        <p>Este jogo foi feito a partir de três tecnologias html, css e javascript.
+                           Toda a parte visual do jogo foi feito para ser o mais agradável possivel
+                           para que o jogador tenha uma experiencia visual confortável e ao mesmo tempo amigável,
+                           funcionando em dispositivos de várias resoluções, isto inclui dispositivos móveis.
+                           <br />
+                           <br />
+                           Espero que goste do jogo e se divirta!!
+                        </p>
+                     </div>
+                  </div>
+                  <!--information_container-slide_slider-->
+                  <div class="information_container-slide_slider font-pink">
+                     <div>
+                        <h2>Funcionamento</h2>
+                        <p>O jogo tem três níveis de dificuldade facíl, médio e difícil,
+                           os níveis se relacionam ao tempo que o jogador terá para resolver
+                           cada conta, sendo as mesmas geradas de forma aleátoria, então não se
+                           assuste com as contas. Falando em resposta o sistema de resposta
+                           é gerado de forma dinâmica a partir do javascript sendo um sistema de
+                           resposta objetivo onde só uma resposta será a correta.
+                           <br />
+                           Sobre o temporizador, ele será resetado a cada resposta que vc der com base no nível de
+                           dificuldade
+                           (como um reset de tempo caso a resposta seja correta).
+                           <br />
+                           <br />
+                           OBS: uma vez o jogo sendo iniciado o botão de dificuldade
+                           será desabilitado até que o tempo acabe.
+                        </p>
+                     </div>
+                  </div>
+                  <!--information_container-slide_slider-->
+                  <div class="information_container-slide_slider font-pink">
+                     <div>
+                        <h2>Placares</h2>
+                        <p>Irá haver três placares, sendo estes organizados pela dificuldade escolhida que irá ranquear
+                           os jogadores
+                           com base na quantidade de resposta respondidas corretamente, lembrando que não existe um
+                           limite de resposta,
+                           o jogo só acaba quando o tempo acaba
+                        </p>
+                        <br />
+                        <h2>Para devs</h2>
+                        <p>Este projeto esta disponivel no github, caso queira saber mais sobre <a target="_blank"
+                              href="https://github.com/MRPollar/Jogo-matematica.git">click aqui</a></p>
+                     </div>
+                  </div>
+                  <!--information_container-slide_slider-->
+
                </div>
-            </div><!--inicio-single-->
+               <!--information_container-slide_limiter-->
 
-            <div class="inicio-single">
-               <img src="img/bg-inicial.png" alt="">
-            </div><!--inicio-single-->
-
-         </div><!--contianer-->
-      </section><!--inicio-->
-
-      <section id="sobre">
-         <div class="container">
-
-            <h2>Sobre o jogo</h2>
-
-            <h3>Apresentação</h3>
-            <p>Este jogo foi feito a partir de três tecnologias html, css e javascript. Toda a parte visual do jogo foi feito para ser o mais agradável possivel para que o jogador tenha uma experiencia visual confortável e ao mesmo tempo amigável, funcionando em dispositivos de várias resoluções, isto inclui dispositivos móveis.</p>
-            <br/>
-            <p>Espero que goste do jogo e se divirta!!</p>
-
-            <h3>Funcionamento</h3>
-            <p>O jogo tem três níveis de dificuldade facíl, médio e difícil, os níveis se relacionam ao tempo que o jogador terá para resolver cada conta, sendo as mesmas geradas de forma aleátoria, então não se assuste com as contas. Falando em resposta o sistema de resposta é gerado de forma dinâmica a partir do javascript sendo um sistema de resposta objetivo onde só uma resposta será a correta.
-            Sobre o temporizador, ele será resetado a cada resposta que vc der com base no nível de dificuldade (como um reset de tempo caso a resposta seja correta).</p>
-            <br/>
-            <p>OBS: uma vez o jogo sendo iniciado o botão de dificuldade será desabilitado até que o tempo acabe.</p>
-
-            <h3>Placares</h3>
-            <p>Irá haver três placares, sendo estes organizados pela dificuldade escolhida que irá ranquear os jogadores com base na quantidade de resposta respondidas corretamente, lembrando que não existe um limite de resposta, o jogo só acaba quando o tempo acaba.</p>
-
-            <h3>Para devs</h3>
-            <p>Este projeto esta disponivel no github, caso queira saber mais sobre <a href="">clique aqui</a>.</p>
+            </div>
+            <!--information_container-slide-->
+            <span></span><span></span><span></span>
+            <div class="clear"></div>
          </div>
-      </section>
-   </main>
+         <!--information_container-->
+      </div>
+      <!--information-->
 
-   <script>
-      const toggle = document.querySelector('.menu-toggle');
-      const toggleList = document.querySelector('.mobile ul');
+   </section>
+   <!--login-->
 
-      toggle.addEventListener('click', openMenu)
+   <section class="game flex-display">
+      <div class="game-container_placares radius-right">
 
-      function openMenu(){
+         <div class="game-container_placares-information">
+            <h2 class="font-pink radius-right">Dificuldade: <span id="outDif">--</span></h2>
+            <h2>Player: <span id="outNome">--</span></h2>
+            <h2>Acertos: <span id="outAcertos">00</span></h2>
+            <h2>Erros: <span id="outErr">00</span></h2>
+            <h2>Respondidas: <span id="outResp">00</span></h2>
+         </div>
+         <!--game-container_placares-information-->
 
-         toggle.classList.toggle('active');
-         toggleList.classList.toggle('active')
+         <div class="game-container-timer">
+            <div title="Temporizador" class="timer container-border">
+               <h2 id="outTimer">00</h2>
+            </div>
+            <p>Temporizador</p>
+         </div>
 
-      }
-   </script>
+         <div class="game-container-button">
+            <input title="Começar" class="center-button" type="button" value="Começar" name="comecar">
+            <input title="Dificuldade" class="center-button" type="button" value="Dificuldade" name="dificuldade">
+            <div class="game-container-button_dif total-radius">
+               <ul class="font-pink">
+                  <li title="Fácil"><input type="radio" name="dif" value="facil">Fácil</li>
+                  <li title="Médio"><input type="radio" name="dif" value="medio">Médio</li>
+                  <li title="Difícil"><input type="radio" name="dif" value="dificil">Difícil</li>
+               </ul>
+            </div>
+         </div>
+
+      </div>
+      <!--game-container_placares-->
+
+      <div class="game-container_resp">
+         <button title="Sair" id="logout" class="total-radius">Sair</button>
+         <div class="game-container_resp-game">
+
+            <div class="game-container_resp-game_conta total-radius container-border">
+               <h1>--</h1>
+            </div>
+
+            <div class="game-container_resp-game_resp total-radius container-border">
+               <p></p>
+               <p></p>
+               <p></p>
+               <p></p>
+            </div>
+
+         </div>
+      </div>
+      <!--game-container_resp-->
+
+   </section>
+
+   <section class="loading">
+      <!--padrão flex-->
+      <div class="loading-container">
+         <div class="c-loader"></div>
+         <h2></h2>
+      </div>
+   </section>
+
+   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+   <script src="js/authentication.js"></script>
+   <script src="js/functions.js"></script>
 </body>
+
 </html>
