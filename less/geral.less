@@ -2,8 +2,9 @@
    padding: 0;
    margin: 0;
    box-sizing: border-box;
-   font-family: 'Montserrat';
    color: @white;
+   font-family: 'Open Sans';
+   appearance: none;
 }
 
 .container{
@@ -20,18 +21,9 @@
 @green: #66fcf1;
 @greendark: #45a29e;
 
-*{
-   padding: 0;
-   margin: 0;
-   box-sizing: border-box;
-   color: @white;
-   font-family: 'Open Sans';
-   appearance: none;
-}
-
 html,body{
    width: 100%;
-   background-color: @black;
+   background-color: @white;
    height: 100%;
 }
 
@@ -45,4 +37,12 @@ html,body{
    font-weight: normal;
    font-size: 20px;
    margin-bottom: 11px;
+}
+
+.opacityOff{
+   opacity: 0;
+}
+
+.opacityOn{
+   opacity: 1;
 }
