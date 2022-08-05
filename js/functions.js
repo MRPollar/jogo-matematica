@@ -80,6 +80,7 @@ function setName(e) {
     } catch(err) { 
         alert(err)
     }
+    outName.value = '';
 }
 btncomecar.addEventListener('click', setName)
 
