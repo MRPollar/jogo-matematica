@@ -225,7 +225,7 @@
          justify-content: center;
          align-items: center;
 
-         a{
+         button{
             position: relative;
             background-color: @white;
             text-decoration: none;
@@ -236,6 +236,9 @@
             border-radius: 4px;
             font-weight: bold;
             transition: .5s;
+            border: none;
+            outline: 0;
+            cursor: pointer;
 
             span{
                position: relative;
@@ -361,7 +364,7 @@
                }
             }
 
-            a{
+            button{
                position: absolute;
                background-color: @white;
                text-decoration: none;
@@ -373,8 +376,11 @@
                font-weight: bold;
                transition: .5s;
                bottom: 10px;
+               border: none;
+               outline: 0;
                left: 50%;
                transform: translateX(-50%);
+               cursor: pointer;
    
                span{
                   position: relative;
@@ -523,6 +529,128 @@
                display: block;
                margin: 10px 0;
             }
+         }
+      }
+   }
+}
+
+#finalGame{
+   width: 100%;
+   height: 100vh;
+   position: fixed;
+   left: 0;
+   top: 0;
+   background-color: rgba(197, 198, 199, 0.556);
+   z-index: 20;
+   transition: .4s;
+   padding: 0 2%;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   opacity: 0;
+
+   .dados{
+      background-color: @blackdark;
+      width: 100%;
+      max-width: 400px;
+      padding: 30px 20px;
+
+      h2{
+         color: @green;
+         margin-bottom: 30px;
+         text-align: center;
+         text-transform: uppercase;
+         font-weight: normal;
+      }
+
+      h4{
+         margin: 5px 0;
+         font-weight: normal;
+         font-size: 20px;
+
+         span{
+            color: @green;
+         }
+      }
+
+      a{
+         position: relative;
+         background-color: @white;
+         text-decoration: none;
+         text-transform: uppercase;
+         font-size: 1.0em;
+         letter-spacing: 0.1em;
+         padding: 10px 30px;
+         border-radius: 4px;
+         font-weight: bold;
+         font-size: 16px;
+         transition: .5s;
+         margin: 10px 0;
+         display: inline-block;
+
+         span{
+            position: relative;
+            z-index: 1;
+            color: inherit;
+
+         }
+
+         i{
+            position: absolute;
+            inset: 0;
+            display: block;
+
+            &::before{
+               content: '';
+               position: absolute;
+               top: 0;
+               left: 80%;
+               transform: translateX(-50%) skewX(325deg);
+               width: 10px;
+               height: 3px;
+               z-index: 1;
+               background-color: @blackdark;
+               transition: .5s;
+            }
+
+            &::after{
+               content: '';
+               position: absolute;
+               bottom: 0;
+               left: 20%;
+               transform: translateX(-50%) skewX(325deg);
+               width: 10px;
+               height: 3px;
+               z-index: 1;
+               background-color: @blackdark;
+               transition: .5s;
+            }
+         }
+
+         &:hover{
+            background-color: @green;
+            box-shadow: 0 0 35px @green;
+            color: @green !important;
+
+            i{
+
+               &::before{
+                  left: 20%;
+                  width: 20px;
+               }
+
+               &::after{
+                  left: 80%;
+                  width: 20px;
+               }
+            }
+         }
+
+         &::before{
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background-color: @blackdark;
          }
       }
    }

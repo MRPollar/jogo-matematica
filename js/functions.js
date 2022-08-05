@@ -6,10 +6,12 @@ const bullets = document.querySelectorAll('.slide-container label')
 const inNome = document.querySelector('#inNome');
 const btncomecar = document.querySelector('.slides a');
 const printConta = document.querySelector('.count > h1');
-
 const err = document.querySelectorAll('.err');
 const corr = document.querySelectorAll('.corr');
-const tResp = document.querySelectorAll('.Tresp')
+const tResp = document.querySelectorAll('.Tresp');
+
+const final = document.querySelector('#finalGame');
+const pontuacao = document.querySelector('.pointer');
 
 // controls
 var temp = 20;
@@ -19,13 +21,16 @@ var totalErr = 0;
 var totalCorr = 0;
 var totalResps = 0;
 
-function initTimer(e) {
-    e.preventDefault();
+function initTimer() {
 
     clear = setInterval(()=>{
         printTimer();
     },1000);
     gerarConta();
+    
+    for(let i = 0; i < btnStart.length; i++){
+        btnStart[i].disabled = true;
+    }
 }
 btnStart.forEach((el)=>{
     el.addEventListener('click', initTimer);
@@ -37,6 +42,9 @@ function printTimer() {
     temp--;
     if(temp === 0){
         clearInterval(clear);
+        final.style.display = 'flex';
+        finalPointer()
+        setTimeout(()=>{final.style.opacity = 1},300);
     }
 
     timer.innerHTML = temp < 10 ? `0${temp}` : temp;
@@ -122,14 +130,14 @@ function count(n1,n2,sy) {
 
         conta = `${n1} + ${n2}`;
         resp = n1 + n2
-        contaGlobal = n1 - n2;
+        contaGlobal = n1 + n2;
 
     } else if(sy == '-') {
 
         if(n1 < n2) {
-            conta = `${n1} - ${n2}`;
-            resp = n1 - n2;
-            contaGlobal = n1 - n2;
+            conta = `${n2} - ${n1}`;
+            resp = n2 - n1;
+            contaGlobal = n2 - n1;
         } else {
             conta = `${n1} - ${n2}`;
             resp = n1 - n2;
@@ -230,13 +238,14 @@ function resps(res,val) {
                 corr.forEach((acert)=>{
                     acert.innerHTML = totalCorr < 10 ? `0${totalCorr}` : totalCorr;
                 })
+                addTimer();
             } else {
                 totalErr++
                 err.forEach((error)=>{
                     error.innerHTML = totalErr < 10 ? `0${totalErr}` : totalErr;
                 })
             }
-            
+
             totalResps++
             tResp.forEach((resps)=>{
                 resps.innerHTML = totalResps < 10 ? `0${totalResps}` : totalResps;
@@ -246,4 +255,15 @@ function resps(res,val) {
         })
     })
 
+}
+
+function addTimer() {
+    timer.innerHTML = temp + 5 > 20 ? 20 : temp + 5;
+    timermobile.innerHTML = temp + 5 > 20 ? 20 : temp + 5;
+}
+
+function finalPointer() {
+    let calc = totalCorr * 10
+
+    pontuacao.innerHTML = `${isNaN(calc) ? `00` : calc}`
 }

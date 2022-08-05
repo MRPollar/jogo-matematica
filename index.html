@@ -24,11 +24,12 @@
 
                   <div class="slide s1">
                      <h2>MATH GAME</h2>
-                     <p>Olá seja muito bem vindo a versão DEMO do MATH GAME, antes de começarmos faremos uma breve explicão sobre como o jogo funciona.</p>
+                     <p>Olá seja muito bem vindo a versão DEMO do MATH GAME, antes de começarmos aqui vai uma breve explicão sobre como o jogo funciona.</p>
                   </div><!-- slide -->
                   <div class="slide">
                      <h2>funcionamento</h2>
-                     <p>O programa irá gerar números randômicos(aleátorios) e irá gerar uma conta de matemática básica, isto é, adição, subtração, multiplicação ou divisão, juntamente com isso o programa irá gerar 4 respotas dinâmicamente se baseando no resultado da conta.</p>
+                     <p>O programa irá gerar números randômicos(aleátorios) e irá gerar uma conta de matemática básica, isto é, adição, subtração, multiplicação e divisão, juntamente com isso o programa irá gerar 4 respotas dinâmicamente se baseando no resultado da conta, caso acerte a resposta a contagem será resetada.</p>
+                     <br/>
                      <p>OBS: O sistema de dificuldade está desabilitado</p>
                   </div><!-- slide -->
                   <div class="slide">
@@ -47,6 +48,18 @@
          </div><!-- slide-apresentacao -->
       </div><!-- namePlayer -->
 
+      <div id="finalGame">
+         <div class="dados">
+            <h2>pontuação</h2>
+            <h4>Jogador: <span class="outNome">--</span></h4>
+            <h4>Erros: <span class="err">00</span></h4>
+            <h4>Acertos: <span class="corr">00</span></h4>
+            <h4>Respondidos: <span class="Tresp">00</span></h4>
+            <h4>Pontuação: <span class="pointer">00</span></h4>
+            <a href="https://mrpollar.github.io/Portfolio/"><span>portfólio</span><i></i></a>
+         </div>
+      </div>
+
       <section class="game">
          <div class="panel">
 
@@ -63,7 +76,7 @@
             </div><!-- Temporizador -->
 
             <div class="control">
-               <a class="start" href="#"><span>start</span><i></i></a>
+               <button class="start"><span>start</span><i></i></button>
             </div>
             <h1 style="text-align: center;margin-top: 60px;">DEMO</h1>
          </div><!-- panel -->
@@ -82,22 +95,14 @@
                   <div class="temporizador-mobile">
                      <h2>20</h2>
                   </div><!-- temorizador-mobile -->
-                  <a class="start" href="#"><span>start</span><i></i></a>
+                  <button class="start"><span>start</span><i></i></button>
                </div><!-- panel-mobile -->
                <h1>( -- )</h1>
 
             </div><!-- count -->
 
             <div class="resp">
-               <!-- <input type="radio" name="bullet" id="radio1">
-               <input type="radio" name="bullet" id="radio2">
-               <input type="radio" name="bullet" id="radio3">
-               <input type="radio" name="bullet" id="radio4">
-
-               <label class="radio1" for="radio1"><span></span> 1</label>
-               <label class="radio2" for="radio2"><span></span> 2</label>
-               <label class="radio3" for="radio3"><span></span> 3</label>
-               <label class="radio4" for="radio4"><span></span> 4</label> -->
+               <!-- ADICIONADO DINÂMICAMENTE -->
             </div><!-- resp -->
          </div><!-- printname -->
       </section>

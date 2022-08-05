@@ -225,7 +225,7 @@ body {
   justify-content: center;
   align-items: center;
 }
-.game .panel .control a {
+.game .panel .control button {
   position: relative;
   background-color: #c5c6c7;
   text-decoration: none;
@@ -236,18 +236,21 @@ body {
   border-radius: 4px;
   font-weight: bold;
   transition: .5s;
+  border: none;
+  outline: 0;
+  cursor: pointer;
 }
-.game .panel .control a span {
+.game .panel .control button span {
   position: relative;
   z-index: 1;
   color: inherit;
 }
-.game .panel .control a i {
+.game .panel .control button i {
   position: absolute;
   inset: 0;
   display: block;
 }
-.game .panel .control a i::before {
+.game .panel .control button i::before {
   content: '';
   position: absolute;
   top: 0;
@@ -259,7 +262,7 @@ body {
   background-color: #1f2833;
   transition: .5s;
 }
-.game .panel .control a i::after {
+.game .panel .control button i::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -271,21 +274,21 @@ body {
   background-color: #1f2833;
   transition: .5s;
 }
-.game .panel .control a:hover {
+.game .panel .control button:hover {
   letter-spacing: 0.25em;
   background-color: #66fcf1;
   box-shadow: 0 0 35px #66fcf1;
   color: #66fcf1 !important;
 }
-.game .panel .control a:hover i::before {
+.game .panel .control button:hover i::before {
   left: 20%;
   width: 20px;
 }
-.game .panel .control a:hover i::after {
+.game .panel .control button:hover i::after {
   left: 80%;
   width: 20px;
 }
-.game .panel .control a::before {
+.game .panel .control button::before {
   content: '';
   position: absolute;
   inset: 2px;
@@ -340,7 +343,7 @@ body {
   font-size: 19px;
   color: #1f2833;
 }
-.game .printgame .count .panel-mobile a {
+.game .printgame .count .panel-mobile button {
   position: absolute;
   background-color: #c5c6c7;
   text-decoration: none;
@@ -352,20 +355,23 @@ body {
   font-weight: bold;
   transition: .5s;
   bottom: 10px;
+  border: none;
+  outline: 0;
   left: 50%;
   transform: translateX(-50%);
+  cursor: pointer;
 }
-.game .printgame .count .panel-mobile a span {
+.game .printgame .count .panel-mobile button span {
   position: relative;
   z-index: 1;
   color: inherit;
 }
-.game .printgame .count .panel-mobile a i {
+.game .printgame .count .panel-mobile button i {
   position: absolute;
   inset: 0;
   display: block;
 }
-.game .printgame .count .panel-mobile a i::before {
+.game .printgame .count .panel-mobile button i::before {
   content: '';
   position: absolute;
   top: 0;
@@ -377,7 +383,7 @@ body {
   background-color: #1f2833;
   transition: .5s;
 }
-.game .printgame .count .panel-mobile a i::after {
+.game .printgame .count .panel-mobile button i::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -389,21 +395,21 @@ body {
   background-color: #1f2833;
   transition: .5s;
 }
-.game .printgame .count .panel-mobile a:hover {
+.game .printgame .count .panel-mobile button:hover {
   letter-spacing: 0.25em;
   background-color: #66fcf1;
   box-shadow: 0 0 35px #66fcf1;
   color: #66fcf1 !important;
 }
-.game .printgame .count .panel-mobile a:hover i::before {
+.game .printgame .count .panel-mobile button:hover i::before {
   left: 20%;
   width: 20px;
 }
-.game .printgame .count .panel-mobile a:hover i::after {
+.game .printgame .count .panel-mobile button:hover i::after {
   left: 80%;
   width: 20px;
 }
-.game .printgame .count .panel-mobile a::before {
+.game .printgame .count .panel-mobile button::before {
   content: '';
   position: absolute;
   inset: 2px;
@@ -474,4 +480,108 @@ body {
     display: block;
     margin: 10px 0;
   }
+}
+#finalGame {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(197, 198, 199, 0.556);
+  z-index: 20;
+  transition: .4s;
+  padding: 0 2%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+#finalGame .dados {
+  background-color: #1f2833;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px 20px;
+}
+#finalGame .dados h2 {
+  color: #66fcf1;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+#finalGame .dados h4 {
+  margin: 5px 0;
+  font-weight: normal;
+  font-size: 20px;
+}
+#finalGame .dados h4 span {
+  color: #66fcf1;
+}
+#finalGame .dados a {
+  position: relative;
+  background-color: #c5c6c7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.0em;
+  letter-spacing: 0.1em;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  transition: .5s;
+  margin: 10px 0;
+  display: inline-block;
+}
+#finalGame .dados a span {
+  position: relative;
+  z-index: 1;
+  color: inherit;
+}
+#finalGame .dados a i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+#finalGame .dados a i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 80%;
+  transform: translateX(-50%) skewX(325deg);
+  width: 10px;
+  height: 3px;
+  z-index: 1;
+  background-color: #1f2833;
+  transition: .5s;
+}
+#finalGame .dados a i::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  transform: translateX(-50%) skewX(325deg);
+  width: 10px;
+  height: 3px;
+  z-index: 1;
+  background-color: #1f2833;
+  transition: .5s;
+}
+#finalGame .dados a:hover {
+  background-color: #66fcf1;
+  box-shadow: 0 0 35px #66fcf1;
+  color: #66fcf1 !important;
+}
+#finalGame .dados a:hover i::before {
+  left: 20%;
+  width: 20px;
+}
+#finalGame .dados a:hover i::after {
+  left: 80%;
+  width: 20px;
+}
+#finalGame .dados a::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background-color: #1f2833;
 }
