@@ -141,4 +141,172 @@ body {
 }
 .game .printgame {
   width: 74%;
+  padding: 0 2%;
+}
+.game .printgame .count {
+  padding: 10px 2%;
+  max-width: 800px;
+  min-height: 350px;
+  margin: 40px auto;
+  border: 2px solid #66fcf1;
+  position: relative;
+  border-radius: 5px;
+}
+.game .printgame .count h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: #66fcf1;
+}
+.game .printgame .count .panel-mobile {
+  display: none;
+}
+.game .printgame .count .panel-mobile h4 {
+  color: #66fcf1;
+}
+.game .printgame .count .panel-mobile .dados-mobile {
+  width: 50%;
+}
+.game .printgame .count .panel-mobile .temporizador-mobile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #66fcf1;
+  position: relative;
+  margin-left: 30px;
+}
+.game .printgame .count .panel-mobile .temporizador-mobile h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 19px;
+}
+.game .printgame .count .panel-mobile a {
+  position: absolute;
+  background-color: #c5c6c7;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.80em;
+  letter-spacing: 0.1em;
+  padding: 10px 30px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: .5s;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.game .printgame .count .panel-mobile a span {
+  position: relative;
+  z-index: 1;
+  color: inherit;
+}
+.game .printgame .count .panel-mobile a i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.game .printgame .count .panel-mobile a i::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 80%;
+  transform: translateX(-50%) skewX(325deg);
+  width: 10px;
+  height: 3px;
+  z-index: 1;
+  background-color: #1f2833;
+  transition: .5s;
+}
+.game .printgame .count .panel-mobile a i::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  transform: translateX(-50%) skewX(325deg);
+  width: 10px;
+  height: 3px;
+  z-index: 1;
+  background-color: #1f2833;
+  transition: .5s;
+}
+.game .printgame .count .panel-mobile a:hover {
+  letter-spacing: 0.25em;
+  background-color: #66fcf1;
+  box-shadow: 0 0 35px #66fcf1;
+  color: #66fcf1 !important;
+}
+.game .printgame .count .panel-mobile a:hover i::before {
+  left: 20%;
+  width: 20px;
+}
+.game .printgame .count .panel-mobile a:hover i::after {
+  left: 80%;
+  width: 20px;
+}
+.game .printgame .count .panel-mobile a::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  background-color: #1f2833;
+}
+.game .printgame .resp {
+  padding: 10px 2%;
+  max-width: 800px;
+  min-height: 200px;
+  margin: 0 auto;
+  border: 2px solid #66fcf1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game .printgame .resp input {
+  display: none;
+}
+.game .printgame .resp span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #c5c6c7;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.game .printgame .resp label {
+  cursor: pointer;
+  font-weight: bold;
+  color: #66fcf1;
+}
+.game .printgame .resp label:not(:last-child) {
+  margin-right: 40px;
+}
+.game .printgame .resp #radio1:checked ~ label.radio1 span,
+.game .printgame .resp #radio2:checked ~ label.radio2 span,
+.game .printgame .resp #radio3:checked ~ label.radio3 span,
+.game .printgame .resp #radio4:checked ~ label.radio4 span {
+  background-color: #1f2833;
+  border: 3px solid #c5c6c7;
+}
+@media (max-width: 768px) {
+  .game .panel {
+    display: none;
+  }
+  .game .printgame {
+    width: 100%;
+  }
+  .game .printgame .count {
+    min-height: 270px;
+  }
+  .game .printgame .count h1 {
+    font-size: 20px;
+    margin-top: 15px;
+  }
+  .game .printgame .count .panel-mobile {
+    display: flex !important;
+    justify-content: left;
+    align-items: center;
+  }
 }

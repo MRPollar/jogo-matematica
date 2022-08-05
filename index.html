@@ -30,12 +30,51 @@
             <div class="control">
                <a href="#"><span>start</span><i></i></a>
             </div>
+            <h1 style="text-align: center;margin-top: 60px;">DEMO</h1>
          </div><!-- panel -->
          <div class="printgame">
 
-         </div>
+            <div class="count">
+
+               <div class="panel-mobile">
+                  <div class="dados-mobile">
+                     <h4>Dificuldade: <span>Difícil</span></h4>
+                     <h4>Nome: <span>Alan</span></h4>
+                     <h4>Erros: <span>00</span></h4>
+                     <h4>Acertos: <span>00</span></h4>
+                     <h4>Respondidas: <sapn>00</sapn></h4>
+                  </div><!-- dados-mobile -->
+                  <div class="temporizador-mobile">
+                     <h2>00</h2>
+                  </div><!-- temorizador-mobile -->
+                  <a href="#"><span>start</span><i></i></a>
+               </div><!-- panel-mobile -->
+               <h1>( -- )</h1>
+
+            </div><!-- count -->
+
+            <div class="resp">
+               <input type="radio" name="bullet" id="radio1">
+               <input type="radio" name="bullet" id="radio2">
+               <input type="radio" name="bullet" id="radio3">
+               <input type="radio" name="bullet" id="radio4">
+
+               <label class="radio1" for="radio1"><span></span> 1</label>
+               <label class="radio2" for="radio2"><span></span> 2</label>
+               <label class="radio3" for="radio3"><span></span> 3</label>
+               <label class="radio4" for="radio4"><span></span> 4</label>
+            </div>
+         </div><!-- printname -->
       </section>
          <!-- game -->
+      <!-- <script>
+         const el = document.querySelectorAll('input[type=radio]')
 
+         for(let i = 0; i < el.length; i++){
+            el[i].addEventListener('click', ()=>{
+               alert('clique' + i)
+            })
+         }
+      </script> -->
    </body>
 </html>

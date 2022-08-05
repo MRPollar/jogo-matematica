@@ -125,5 +125,212 @@
 
    .printgame{
       width: 74%;
+      padding: 0 2%;
+
+      .count{
+         padding: 10px 2%;
+         max-width: 800px;
+         min-height: 350px;
+         margin: 40px auto;
+         border: 2px solid @green;
+         position: relative;
+         border-radius: 5px;
+
+         h1{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 60px;
+            color: @green;
+         }
+
+         .panel-mobile{
+            display: none;
+            
+            h4{
+               color: @green;
+            }
+
+            .dados-mobile{
+               width: 50%;
+            }
+
+            .temporizador-mobile{
+               width: 50px;
+               height: 50px;
+               border-radius: 50%;
+               border: 2px solid @green;
+               position: relative;
+               margin-left: 30px;
+
+               h2{
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%,-50%);
+                  font-size: 19px;
+               }
+            }
+
+            a{
+               position: absolute;
+               background-color: @white;
+               text-decoration: none;
+               text-transform: uppercase;
+               font-size: 0.80em;
+               letter-spacing: 0.1em;
+               padding: 10px 30px;
+               border-radius: 4px;
+               font-weight: bold;
+               transition: .5s;
+               bottom: 10px;
+               left: 50%;
+               transform: translateX(-50%);
+   
+               span{
+                  position: relative;
+                  z-index: 1;
+                  color: inherit;
+   
+               }
+   
+               i{
+                  position: absolute;
+                  inset: 0;
+                  display: block;
+   
+                  &::before{
+                     content: '';
+                     position: absolute;
+                     top: 0;
+                     left: 80%;
+                     transform: translateX(-50%) skewX(325deg);
+                     width: 10px;
+                     height: 3px;
+                     z-index: 1;
+                     background-color: @blackdark;
+                     transition: .5s;
+                  }
+   
+                  &::after{
+                     content: '';
+                     position: absolute;
+                     bottom: 0;
+                     left: 20%;
+                     transform: translateX(-50%) skewX(325deg);
+                     width: 10px;
+                     height: 3px;
+                     z-index: 1;
+                     background-color: @blackdark;
+                     transition: .5s;
+                  }
+               }
+   
+               &:hover{
+                  letter-spacing: 0.25em;
+                  background-color: @green;
+                  box-shadow: 0 0 35px @green;
+                  color: @green !important;
+   
+                  i{
+   
+                     &::before{
+                        left: 20%;
+                        width: 20px;
+                     }
+      
+                     &::after{
+                        left: 80%;
+                        width: 20px;
+                     }
+                  }
+               }
+   
+               &::before{
+                  content: '';
+                  position: absolute;
+                  inset: 2px;
+                  background-color: @blackdark;
+               }
+            }
+         }
+      }
+
+      .resp{
+         padding: 10px 2%;
+         max-width: 800px;
+         min-height: 200px;
+         margin: 0 auto;
+         border: 2px solid @green;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+
+         input{
+            display: none;
+         }
+
+         span{
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-color: @white;
+            border-radius: 10px;
+            cursor: pointer;
+            position: relative;
+
+         }
+
+         label{
+            cursor: pointer;
+            font-weight: bold;
+            color: @green
+         }
+
+         label:not(:last-child){
+            margin-right: 40px;
+         }
+
+         #radio1:checked ~ label.radio1 span,
+         #radio2:checked ~ label.radio2 span,
+         #radio3:checked ~ label.radio3 span,
+         #radio4:checked ~ label.radio4 span{
+            background-color: @blackdark;
+            border: 3px solid @white;
+         }
+
+         
+         
+      }
+   }
+
+   @media (max-width: 768px){
+      .panel{
+         display: none;
+      }
+
+      .printgame{
+         width: 100%;
+
+         .count{
+            min-height: 270px;
+
+            h1{
+               font-size: 20px;
+               margin-top: 15px;
+            }
+
+            .panel-mobile{
+               display: flex !important;
+               justify-content: left;
+               align-items: center;
+            }
+         }
+
+         
+      }
    }
 }
+
+
